@@ -1,5 +1,26 @@
-.container {
+.view1 {
+  width: 60%;
+  height: 120px;
+  background-color: rebeccapurple;
 }
 
-.box {
+.view2 {
+  width: 50%;
+  height: 80px;
+  background-color: red;
+}
+
+.view3 {
+  width: 50%;
+  height: 50px;
+  background-color: yellow;
+}
+
+.input-order{
+  border: gray solid 1px;
+  margin: 20px ;
+  padding: 5px;
+}
+button{
+  width:85%;
 }

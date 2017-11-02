@@ -1,15 +1,47 @@
+
+var app = getApp();
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    
+    expressNu:null,
+    expressInfo:null
   },
-
+  view1Click:function(){
+    console.log("view1Click")
+  },
+  view2Click: function (e) {
+    console.log("view2Click")
+    console.log(e)
+  },
+  view3Click: function (e) {
+    console.log("view3Click")
+    console.log(e)
+  },
+  //点击查询
+  btnClick:function(){
+    //例子 806820160474
+    var mThis = this;
+    app.getExpressInfo(this.data.expressNu,function(data){
+      console.log(data)
+      mThis.setData({
+        expressInfo:data
+      })
+    })
+  },
+  //动态获取输入框内容
+  getInput:function(e){
+    this.setData({
+      expressNu: e.detail.value
+    })
+    // console.log(e)
+  },
   /**
    * 生命周期函数--监听页面加载
-   */
+   */ 
   onLoad: function (options) {
     
   },

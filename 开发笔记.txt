@@ -1,3 +1,4 @@
+   // "src/jikexueyuan/day01/index",
 步骤:
 (1)创建项目:选择目录文件夹
 (2)点击无APPID
@@ -43,3 +44,12 @@ app.wxss 以.wxss后缀是样式表文件
 (3)在js中事件: 事件名: function (可选参数) { }
 (4)在js中获取数据:this.data.变量名
 (5)在js中设置数据:  this.setData({变量名:新数据})
+
+
+    "src/jikexueyuan/day02/index"
+4,微信小程序事件
+事件类型
+(1)事件类型:点击事件:tap,长按事件:longtap,触摸事件:touchstart  touchend  touchmove  touchcancel,其他 submit input
+(2)事件的冒泡:冒泡事件,非冒泡事件
+(3)事件绑定:bind 绑定,catch 绑定
+(4)事件对象:类型type,时间戳timeStamp,事件源组件target,当前组件currenttarget,触摸点事touches

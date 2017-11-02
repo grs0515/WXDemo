@@ -1,2 +1,19 @@
 这是第二天
-<view class="container">这是一个视图</view>
+<view class="view1" bindtap="view1Click" id="view1">
+  这是一个视图
+  <view class="view2" bindtap="view2Click" id="view2">
+    这是二个视图
+    <view class="view3" catchtap="view3Click" id="view3">
+      这是三个视图
+    </view>
+  </view>
+</view>
+
+<input class='input-order' type='number' bindinput='getInput' placeholder="请输入订单号"/>
+<button type='primary' bindtap='btnClick'>查询</button>
+<scroll-view scroll-y style='margin:10px;height:300px'>
+  <view wx:for='{{expressInfo.data}}'>
+    <view>[{{item.time}}]</view>
+    <view>{{item.context}} </view>
+  </view>
+</scroll-view>
