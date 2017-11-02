@@ -1,0 +1,7 @@
+<template name="foot1">
+  这是底部 模板1 - {{text}}
+</template>
+
+<template name="foot2">
+  这是底部 模板2 - {{text}}
+</template>

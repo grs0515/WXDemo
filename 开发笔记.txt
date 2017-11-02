@@ -1,0 +1,45 @@
+步骤:
+(1)创建项目:选择目录文件夹
+(2)点击无APPID
+(3)不勾线"创建QuickStart项目" 
+
+新建:
+(1)项目文件:app.js,app.json,app.wxss三个必须文件
+(2)代码文件:创建src/ ... 页面文件:xxx.js,xxx.wxml两个必须文件
+
+
+1,小程序关键文件:
+app.js 以.js后缀是脚本文件
+app.json 以.json后缀是配置文件
+app.wxss 以.wxss后缀是样式表文件
+
+以.wxml后缀是页面结构文件
+
+
+
+2,格式化代码: shift+option+f
+最近文件:command+e
+搜索文件:command+p
+全局查找:shift+command+f
+
+
+3,视图和渲染
+(1)数据的绑定:
+  使用双括号{{txt}} 在.js中 data: {
+    txt:"这里text是内容"
+  }
+(2)改变数据:this.setData({txt:"恭喜你 中奖了~"})
+(3)点击事件:bindtap="btnClick"
+(4)判断标签:wx:if=""  wx:else 
+(5)循环标签:wx:for="" 改变名字:wx:for-item="" 删除:newList.shift 固定条目:{{item}}和固定序号:{{index}}
+(6)模板:
+  一种:<include src="templates/header"/>导入带视图
+  一种:<import src="templates/footer"/>
+<template is="foot2" data="{{text:importText}}"/>
+
+小结:
+(1)在wxml中赋值:{{}},在js中data初始化
+(2)在wxml标签中: 关键字="" 
+(3)在js中事件: 事件名: function (可选参数) { }
+(4)在js中获取数据:this.data.变量名
+(5)在js中设置数据:  this.setData({变量名:新数据})

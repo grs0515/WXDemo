@@ -1,0 +1,22 @@
+<view></view>
+<text> 祝福王瑞同学,每一天开心快乐~</text>
+<view> </view>
+
+<image class="img" src="../../image/happy.jpg" />
+
+
+<include src="templates/header" />
+
+<button bindtap="btnClick">点击试试</button>
+
+<text>{{txt}}</text>
+
+<view wx:if="{{isShow}}">{{txt}} +1 </view>
+<view wx:else>{{txt}} +2</view>
+
+<view wx:for="{{list}}" wx:for-item="newItem">
+  {{index}} 循环内容: {{newItem}}
+</view>
+
+<import src="templates/footer" />
+<template is="foot2" data="{{text:importText}}" />
