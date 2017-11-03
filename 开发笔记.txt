@@ -1,4 +1,4 @@
-   // "src/jikexueyuan/day01/index",
+
 步骤:
 (1)创建项目:选择目录文件夹
 (2)点击无APPID
@@ -53,3 +53,28 @@ app.wxss 以.wxss后缀是样式表文件
 (2)事件的冒泡:冒泡事件,非冒泡事件
 (3)事件绑定:bind 绑定,catch 绑定
 (4)事件对象:类型type,时间戳timeStamp,事件源组件target,当前组件currenttarget,触摸点事touches
+
+5,小案例:快递查询
+(1)输入框:<input class='input-order' type='number' bindinput='getInput' placeholder="请输入订单号"/>
+(2)显示:<scroll-view scroll-y >
+    <view wx:for='{{xxx}}'>
+    </view>
+  </scroll-view>
+(3)请求数据:getExpressInfo: function (nu,callBack) {
+    wx.request({
+      url: 'http://apis.baidu.com/kuaidicom/express_api/express_api?muti=0&order=desc&nu='+nu,
+      method:'GET',
+      data: {
+        x: '',
+        y: ''
+      },
+      header: {
+        // 'content-type': 'application/json',// 默认值
+        'apikey': '985236102e5c282413267e40b3a049f3'
+      },
+      success: function (res) {
+        // console.log(res.data)
+        callBack(res.data)
+      }
+    })
+  }

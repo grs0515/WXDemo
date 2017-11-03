@@ -2,7 +2,7 @@
 <text> 祝福王瑞同学,每一天开心快乐~</text>
 <view> </view>
 
-<image class="img" src="../../image/happy.jpg" />
+<image class="img" src="../../../image/happy.jpg" />
 
 
 <include src="templates/header" />

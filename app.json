@@ -1,5 +1,6 @@
 {
   "pages": [
+    "src/jikexueyuan/day01/index",
     "src/jikexueyuan/day02/index"
   ],
   "window": {
@@ -7,7 +8,30 @@
     "navigationBarTextStyle": "black",
     "navigationBarTitleText": "小程序",
     "backgroundColor": "#eeeeee",
-    "backgroundTextStyle": "light",
-    "enablePullDownRefresh": false
-  }
+    "backgroundTextStyle": "dark",
+    "enablePullDownRefresh": true,
+    "onReachBottomDistance":100
+  },
+  "tabBar": {
+    "list": [{
+      "pagePath": "src/jikexueyuan/day01/index",
+      "text": "Day01",
+      "iconPath": "image/icon_component.png",
+      "selectedIconPath": "image/icon_component_HL.png"
+    },
+    {
+      "pagePath":"src/jikexueyuan/day02/index",
+      "text":"Day02",
+      "iconPath":"image/icon_API.png",
+      "selectedIconPath":"image/icon_API_HL.png"
+    }
+    ]
+  },
+  "networkTimeout": {
+    "request": 20000,
+    "connectSocket": 20000,
+    "uploadFile": 20000,
+    "downloadFile": 20000
+  },
+  "debug":true
 }

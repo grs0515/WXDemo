@@ -4,8 +4,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-    txt: "这里text是内容",
     isShow: false,
+    txt: "这里text是内容",
     list:["aaa","bbb","ccc"],
     importText:"导入数据的内容"
   },
