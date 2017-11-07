@@ -78,3 +78,7 @@ app.wxss 以.wxss后缀是样式表文件
       }
     })
   }
+
+6,生命周期
+(1)APP: onLaunch --> onShow, 切换后台: onHide, 发生错误:onError
+(2)Page: onLoad --> onShow --> onReady 

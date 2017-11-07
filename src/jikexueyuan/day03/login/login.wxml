@@ -1,0 +1,6 @@
+<view class='container'>
+<image id='login-header-image' src='../../../../image/icon64_appwx_logo.png' ></image>
+<input class='input' placeholder='请输入用户名' bindinput='usernameInput'></input>
+<input class='input' placeholder='请输入密码' bindinput='passwordInput'></input>
+<button bindtap='btnLogin'>登陆</button>
+</view>

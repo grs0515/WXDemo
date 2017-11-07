@@ -1,8 +1,11 @@
 {
   "pages": [
     "src/jikexueyuan/day01/index",
-    "src/jikexueyuan/day02/index"
+    "src/jikexueyuan/day02/index",
+    "src/jikexueyuan/day03/user/index",
+    "src/jikexueyuan/day03/login/login"
   ],
+
   "window": {
     "navigationBarBackgroundColor": "#ffffff",
     "navigationBarTextStyle": "black",
@@ -13,6 +16,7 @@
     "onReachBottomDistance":100
   },
   "tabBar": {
+    "selectedColor": "#4e9449",
     "list": [{
       "pagePath": "src/jikexueyuan/day01/index",
       "text": "Day01",
@@ -24,6 +28,12 @@
       "text":"Day02",
       "iconPath":"image/icon_API.png",
       "selectedIconPath":"image/icon_API_HL.png"
+    },
+    {
+      "pagePath": "src/jikexueyuan/day03/user/index",
+      "text": "Day03",
+      "iconPath": "image/wechat.png",
+      "selectedIconPath": "image/wechatHL.png"
     }
     ]
   },

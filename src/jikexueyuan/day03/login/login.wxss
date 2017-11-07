@@ -1,0 +1,6 @@
+/* src/jikexueyuan/day03/login/login.wxss */
+#login-header-image{
+  width: 100rpx;
+  height:100rpx;
+  margin: 10rpx
+}
