@@ -1,0 +1,85 @@
+.container-flex {
+  height: 300px;
+  width: 100%;
+  background-color: rebeccapurple;
+  /* 设置flex布局 */
+  display: flex;
+
+  /* 水平-主轴 *//*  flex-direction: row  *//* 垂直-主轴 */
+  flex-direction: row;
+
+  /* 包裹换行 */
+  flex-wrap: wrap;
+
+  /* 等同于:flex-direction: row;flex-wrap: wrap; */
+  /* flex-flow: row wrap; */
+  
+  /* 主轴上对齐: 左对齐flex-start,右对齐flex-end,居中center
+     左右间距相等space-around,左右对齐中间等分space-between
+  */
+  justify-content: center;
+
+  /* 交叉轴对齐: 上对齐flex-start,下对齐flex-end,居中center
+     填充父高度stretch(子元素无高度),子元素文字一行对齐baseline
+  */
+  align-items: center;
+
+}
+
+.item {
+  width: 100rpx;
+  height: 100rpx;
+  background-color: rosybrown;
+  border: 1rpx solid #fff;
+
+  /* 多余空间占有比例(拉伸):默认0,平分1,子元素设置可覆盖*/
+   flex-grow: 1; 
+
+  /* 空间不足时(缩小):默认1压缩,子元素设置可覆盖*/
+  flex-shrink: 0;
+
+  /* 等同于:flex-grow: 0, flex-shrink: 1,flex-basis: 50rpx*/
+  /* flex: 0 1 50rpx; */
+
+  /* 定义元素的顺序,子类可覆盖 */
+  order: 10;
+}
+.i3{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* 多余空间占有比例:默认0, */
+  /* flex-grow: 2; */
+
+   /* 主轴占有空间 */
+  flex-basis: 200rpx;
+
+  /* 定义元素的顺序 */
+  order: 1;
+}
+
+.i4{
+  /* 定义自身的对齐方式 */
+  align-self: flex-end;
+}
+
+.view-parent > text{
+  color: blue;
+}
+
+.scroll-view-item{
+  height: 100px
+}
+.bc_green{
+  background-color: green
+}
+.bc_red{
+  background-color: red
+}
+.bc_yellow{
+  background-color: yellow
+}
+.bc_blue{
+  background-color: blue
+}

@@ -1,0 +1,3 @@
+<view>
+跳转的新页面----- ID:{{id}}---title:{{title}}
+</view>

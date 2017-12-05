@@ -81,4 +81,54 @@ app.wxss 以.wxss后缀是样式表文件
 
 6,生命周期
 (1)APP: onLaunch --> onShow, 切换后台: onHide, 发生错误:onError
-(2)Page: onLoad --> onShow --> onReady 
+(2)Page: onLoad --> onShow --> onReady, 切换后台:onHide,卸载:onUnload
+(3)页面跳转: 不带返回: wx.redirectTo({
+        url: '../login/login',
+      })
+      带参数可返回:wx.navigateTo({
+        url: 'user?id=1&title=标题',
+      })
+    跳回Tab:wx.switchTab({
+        url: '../user/index',
+      })
+
+7,flex布局
+(1)
+
+
+8,相对定位和绝对定位
+(1)相对定位:相对自身进行定位,参照物是自己
+(2)绝对定位:相对离它最近的一个已定位的父级元素进行定位
+
+9,样式的属性
+(1)尺寸:width,height
+(2)背景:background
+(3)边框:border
+(4)边距:margin,padding
+(5)文本:font
+
+10,选择器
+(1)类选择器:.xxx{}
+(2)ID选择器:#xxx{}
+(3)元素选择器:name{}
+(4)包含选择器:.xxx xx{}
+(4)子元素选择器:.xxx > xx{}
+
+11,滑块视图容器
+<swiper autoplay='true' interval='2000' indicator-dots='true'>
+  <block wx:for='{{imgUrls}}'>
+    <swiper-item>
+      <image src='{{item}}' bindtap='startDetail'></image>
+    </swiper-item>
+  </block>
+</swiper>
+注:autoplay 是否自动切换; interval 自动切换时间间隔;indicator-dots 是否显示面板指示点;
+
+12,可滚动视图区域
+<scroll-view scroll-y style='height:250px' bindscrolltoupper='scrollToUpper' bindscrolltolower ='scrollToLower' scroll-top='{{scrollTop}}' scroll-into-view='{{intoView}}'>
+   <view id="green" class="scroll-view-item bc_green"></view>
+    <view id="red"  class="scroll-view-item bc_red"></view>
+    <view id="yellow" class="scroll-view-item bc_yellow"></view>
+    <view id="blue" class="scroll-view-item bc_blue"></view>
+</scroll-view>
+注:scroll-y 允许纵向滚动;bindscrolltoupper 滚动到顶部/左边;scroll-top 设置竖向滚动条位置;scroll-into-view 值应为某子元素id（id不能以数字开头）;

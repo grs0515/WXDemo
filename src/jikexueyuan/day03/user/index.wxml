@@ -1,1 +1,4 @@
-<view>登陆成功界面--{{userInfo.username}}</view>
+<view>
+登陆成功界面--{{userInfo.username}}
+</view>
+<button bindtap='btnJump'>点击跳转</button>

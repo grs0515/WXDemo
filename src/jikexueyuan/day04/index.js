@@ -1,61 +1,66 @@
-
-var app = getApp();
-
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    userInfo: null,
+    imgUrls: ['http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg', 'http://img06.tooopen.com/images/20160818/tooopen_sy_175866434296.jpg', 'http://img06.tooopen.com/images/20160818/tooopen_sy_175833047715.jpg'
+    ],
+    scrollTop: 0,
+    intoView:""
+  },
+  startDetail: function (e) {
+    console.log(e)
   },
 
+  scrollToUpper: function (e) {
+    console.log("滑动---顶部")
+  },
+
+  scrollToLower: function (e) {
+    console.log("滑动---底部")
+  },
+
+  scrollTop: function (e) {
+    this.setData({ scrollTop: this.data.scrollTop + 10 })
+  },
+
+  intoView:function(e){
+    this.setData({ intoView:"blue"})
+  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    console.log("onLoad")
-    //全局数据
-    if (app.appData.userInfo == null) {
-      wx.redirectTo({
-        url: '../login/login',
-      })
-    } else {
-      this.setData({ userInfo: app.appData.userInfo })
-    }
+
   },
-  //跳转
-  btnJump: function () {
-    wx.navigateTo({
-      url: 'user?id=1&title=标题',
-    })
-  },
+
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-    console.log("onReady")
+
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    console.log("onShow")
+
   },
 
   /**
    * 生命周期函数--监听页面隐藏
    */
   onHide: function () {
-    console.log("onHide")
+
   },
 
   /**
    * 生命周期函数--监听页面卸载
    */
   onUnload: function () {
-    console.log("onUnload")
+
   },
 
   /**

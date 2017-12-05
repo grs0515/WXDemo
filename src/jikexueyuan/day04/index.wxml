@@ -1,0 +1,33 @@
+<view class='container-flex'>
+
+  <view class='item'>1</view>
+
+  <view class='item'>2</view>
+
+  <view class='item i3'>3</view>
+
+  <view class='item i4'>4</view>
+
+  <view class='view-parent'>
+    <text>测试数据</text>
+    <view class='view-child'>
+      <text>数据</text>
+    </view>
+  </view>
+
+</view>
+<swiper autoplay='true' interval='2000' indicator-dots='true'>
+  <block wx:for='{{imgUrls}}'>
+    <swiper-item>
+      <image src='{{item}}' bindtap='startDetail'></image>
+    </swiper-item>
+  </block>
+</swiper>
+<scroll-view scroll-y='true' style='height:250px' bindscrolltoupper='scrollToUpper' bindscrolltolower ='scrollToLower' scroll-top='{{scrollTop}}' scroll-into-view='{{intoView}}'>
+   <view id="green" class="scroll-view-item bc_green"></view>
+    <view id="red"  class="scroll-view-item bc_red"></view>
+    <view id="yellow" class="scroll-view-item bc_yellow"></view>
+    <view id="blue" class="scroll-view-item bc_blue"></view>
+</scroll-view>
+<button bindtap='scrollTop' style='width:150px'>scroll-top</button>
+<button bindtap='intoView' style='width:150px'>into-view</button>

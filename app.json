@@ -3,7 +3,9 @@
     "src/jikexueyuan/day01/index",
     "src/jikexueyuan/day02/index",
     "src/jikexueyuan/day03/user/index",
-    "src/jikexueyuan/day03/login/login"
+    "src/jikexueyuan/day03/login/login",
+    "src/jikexueyuan/day03/user/user",
+    "src/jikexueyuan/day04/index"
   ],
 
   "window": {
@@ -32,6 +34,12 @@
     {
       "pagePath": "src/jikexueyuan/day03/user/index",
       "text": "Day03",
+      "iconPath": "image/wechat.png",
+      "selectedIconPath": "image/wechatHL.png"
+    },
+    {
+      "pagePath": "src/jikexueyuan/day04/index",
+      "text": "Day04",
       "iconPath": "image/wechat.png",
       "selectedIconPath": "image/wechatHL.png"
     }
