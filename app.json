@@ -1,13 +1,17 @@
 {
   "pages": [
-    "src/jikexueyuan/day01/index",
-    "src/jikexueyuan/day02/index",
-    "src/jikexueyuan/day03/user/index",
-    "src/jikexueyuan/day03/login/login",
-    "src/jikexueyuan/day03/user/user",
-    "src/jikexueyuan/day04/index"
+    "src/demo/index",
+    "src/tool/index",
+    "src/project/index",
+    "src/demo/jikexueyuan/day01/index",
+    "src/demo/jikexueyuan/day02/index",
+    "src/demo/jikexueyuan/day03/index",
+    "src/demo/jikexueyuan/day03/login/login",
+    "src/demo/jikexueyuan/day03/user/user",
+    "src/demo/jikexueyuan/day04/index",
+    "src/demo/jikexueyuan/day05/index",
+    "src/tool/express/index"
   ],
-
   "window": {
     "navigationBarBackgroundColor": "#ffffff",
     "navigationBarTextStyle": "black",
@@ -15,34 +19,29 @@
     "backgroundColor": "#eeeeee",
     "backgroundTextStyle": "dark",
     "enablePullDownRefresh": true,
-    "onReachBottomDistance":100
+    "onReachBottomDistance": 100
   },
   "tabBar": {
-    "selectedColor": "#4e9449",
-    "list": [{
-      "pagePath": "src/jikexueyuan/day01/index",
-      "text": "Day01",
-      "iconPath": "image/icon_component.png",
-      "selectedIconPath": "image/icon_component_HL.png"
-    },
-    {
-      "pagePath":"src/jikexueyuan/day02/index",
-      "text":"Day02",
-      "iconPath":"image/icon_API.png",
-      "selectedIconPath":"image/icon_API_HL.png"
-    },
-    {
-      "pagePath": "src/jikexueyuan/day03/user/index",
-      "text": "Day03",
-      "iconPath": "image/wechat.png",
-      "selectedIconPath": "image/wechatHL.png"
-    },
-    {
-      "pagePath": "src/jikexueyuan/day04/index",
-      "text": "Day04",
-      "iconPath": "image/wechat.png",
-      "selectedIconPath": "image/wechatHL.png"
-    }
+    "selectedColor": "#5382B3",
+    "list": [
+      {
+        "pagePath": "src/demo/index",
+        "text": "演示",
+        "iconPath": "image/hello_world.png",
+        "selectedIconPath": "image/hello_world.png"
+      },
+      {
+        "pagePath": "src/tool/index",
+        "text": "工具",
+        "iconPath": "image/tool.png",
+        "selectedIconPath": "image/tool.png"
+      },
+      {
+        "pagePath": "src/project/index",
+        "text": "项目",
+        "iconPath": "image/project.png",
+        "selectedIconPath": "image/project.png"
+      }
     ]
   },
   "networkTimeout": {
@@ -51,5 +50,5 @@
     "uploadFile": 20000,
     "downloadFile": 20000
   },
-  "debug":true
+  "debug": true
 }

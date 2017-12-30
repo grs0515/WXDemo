@@ -1,0 +1,12 @@
+/* src/jikexueyuan/day05/index.wxss */
+progress{
+  margin: 10rpx 0 10rpx 0
+}
+/** 修改button默认的点击态样式类**/
+.button-hover {
+  background-color: red;
+}
+/** 添加自定义button点击态样式类**/
+.other-button-hover {
+  background-color: blue;
+}

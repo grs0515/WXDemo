@@ -1,0 +1,13 @@
+<!--遍历带有导航的btn  -->
+<template name='navbtn'>
+  <block wx:for='{{list}}'>
+    <navigator url='{{item.url}}' hover-class='none'>
+      <button class='margin'>{{item.title}}</button>
+    </navigator>
+  </block>
+</template>
+
+<!-- item.wxml -->
+<template name="item">
+  <text>{{text}}</text>
+</template>

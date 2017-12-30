@@ -1,5 +1,5 @@
 
-var app = getApp();
+var app = require("../../../../util/http.js");
 
 Page({
 
@@ -7,78 +7,90 @@ Page({
    * 页面的初始数据
    */
   data: {
-    username: null,
-    password: null
+    expressNu:null,
+    expressInfo:null
   },
-  usernameInput: function (e) {
-    this.setData({ username: e.detail.value })
+  view1Click:function(){
+    console.log("view1Click")
   },
-  passwordInput: function (e) {
-    this.setData({ password: e.detail.value })
+  view2Click: function (e) {
+    console.log("view2Click")
+    console.log(e)
   },
-  btnLogin:function(){
-    app.appData.userInfo = {
-      username:this.data.username,
-      password: this.data.password
-    }
-    console.log(app.appData.userInfo)
-    wx.switchTab({
-      url: '../user/index',
+  view3Click: function (e) {
+    console.log("view3Click")
+    console.log(e)
+  },
+  //点击查询
+  btnClick:function(){
+    //例子 806820160474
+    var mThis = this;
+    app.getExpressInfo(this.data.expressNu,function(data){
+      console.log(data)
+      mThis.setData({
+        expressInfo:data
+      })
+    })
+  },
+  //动态获取输入框内容
+  getInput:function(e){
+    this.setData({
+      expressNu: e.detail.value
     })
   },
   /**
    * 生命周期函数--监听页面加载
-   */
+   */ 
   onLoad: function (options) {
-    console.log("onLoad")
+    
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-    console.log("onReady")
+    
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    console.log("onShow")
+    
   },
 
   /**
    * 生命周期函数--监听页面隐藏
    */
   onHide: function () {
-    console.log("onHide")
+    
   },
 
   /**
    * 生命周期函数--监听页面卸载
    */
   onUnload: function () {
-    console.log("onUnload")
+    
   },
 
   /**
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh: function () {
-
+    
   },
 
   /**
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
-
+    
   },
 
   /**
    * 用户点击右上角分享
    */
   onShareAppMessage: function () {
-
+    
   }
 })

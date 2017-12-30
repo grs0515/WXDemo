@@ -3,8 +3,14 @@
   flex-direction: column;
   align-items: center;
 }
-.input{
+
+.input {
   border: gray solid 1rpx;
   padding: 5rpx;
-  margin: 5rpx 
+  margin: 5rpx;
+}
+
+.margin {
+  padding: 5rpx;
+  margin: 30rpx;
 }

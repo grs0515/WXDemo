@@ -1,0 +1,3 @@
+<!--src/demo/index.wxml-->
+<import src='../../util/xtemplate.wxml' />
+<template is="navbtn" data='{{list:listDatas}}' />

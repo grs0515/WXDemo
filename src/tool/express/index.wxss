@@ -1,0 +1,9 @@
+/* src/tool/express/index.wxss */
+.input-order{
+  border: gray solid 1px;
+  margin: 20px ;
+  padding: 5px;
+}
+button{
+  width:85%;
+}

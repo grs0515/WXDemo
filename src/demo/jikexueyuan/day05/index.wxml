@@ -1,0 +1,35 @@
+<!--src/jikexueyuan/day05/index.wxml-->
+<!--文本  -->
+<text>src/jikexueyuan/day05/index.wxml</text>
+<!--图标  -->
+<view>
+  <block wx:for='{{iconType}}'>
+    <icon type='{{item}}' size='40' color='green'></icon>
+  </block>
+</view>
+<!--富文本  -->
+<rich-text nodes="{{nodes}}" bindtap="tap"></rich-text>
+<!--进度  -->
+<progress percent='20' show-info='true'></progress>
+<progress percent='30' stroke-width='10'></progress>
+<progress percent='40' activeColor='gray'></progress>
+<progress percent='50' active='true'></progress>
+<!--表单  -->
+<form>
+<button type="default" size="{{defaultSize}}" loading="{{loading}}" plain="{{plain}}"
+        disabled="{{disabled}}" bindtap="default" hover-class="other-button-hover"> default </button>
+<button type="primary" size="{{primarySize}}" loading="{{loading}}" plain="{{plain}}"
+        disabled="{{disabled}}" bindtap="primary"> primary </button>
+<button type="warn" size="{{warnSize}}" loading="{{loading}}" plain="{{plain}}"
+        disabled="{{disabled}}" bindtap="warn"> warn </button>
+<button bindtap="setDisabled">点击设置以上按钮disabled属性</button>
+<button bindtap="setPlain">点击设置以上按钮plain属性</button>
+<button bindtap="setLoading">点击设置以上按钮loading属性</button>
+<button open-type="contact">进入客服会话</button>
+</form>
+
+<!-- map.wxml -->
+ <map id="map" longitude="113.324520" latitude="23.099994" scale="14" controls="{{controls}}" bindcontroltap="controltap" markers="{{markers}}" bindmarkertap="markertap" polyline="{{polyline}}" bindregionchange="regionchange" show-location style="width: 100%; height: 300px;"></map> 
+<!-- 指向微信公众平台首页的web-view -->
+<web-view src="https://mp.weixin.qq.com/"></web-view>
+
