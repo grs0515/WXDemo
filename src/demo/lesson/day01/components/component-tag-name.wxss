@@ -1,0 +1,10 @@
+/* components/component-tag-name.wxss */
+
+/* 组件 custom-component.wxss */
+/* :host {
+  color: blue;
+} */
+/*组件的css样式  */
+.my-class{
+  color: yellowgreen
+}

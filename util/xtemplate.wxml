@@ -1,7 +1,8 @@
 <!--遍历带有导航的btn  -->
 <template name='navbtn'>
   <block wx:for='{{list}}'>
-    <navigator url='{{item.url}}' hover-class='none'>
+  <!-- hover-class='none' 不带效果 -->
+    <navigator url='{{item.url}}' open-type='{{item.openType}}' hover-class='none'>
       <button class='margin'>{{item.title}}</button>
     </navigator>
   </block>

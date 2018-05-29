@@ -1,0 +1,9 @@
+<template name="movieItem">
+  <view class='movie-item-head'>
+    头部标题
+  </view>
+
+  <view class='movie-item-grid'>
+    grid 条目
+  </view>
+</template>

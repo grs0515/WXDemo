@@ -1,16 +1,10 @@
 // src/tool/index.js
+var appconfig = require("../../data/appconfig.js");
 Page({
 
-  /**
-   * 页面的初始数据
-   */
-  data: {
-    listDatas: [
-      {
-        title: '快递查询',
-        url: '/src/tool/express/index'
-      }
-    ]
-  },
-
+  onLoad: function (options) {
+    this.setData({
+      listDatas: appconfig.configDatas.toolList
+    })
+  }
 })

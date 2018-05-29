@@ -1,0 +1,15 @@
+/* src/project/readermovie/main/index.wxss */
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content {
+  background-color: whitesmoke;
+  /* width: calc(100% - 200rpx); 设置宽度有效,高度无效 */
+}
+
+.main-tabbar {
+  background-color: #eee;
+}

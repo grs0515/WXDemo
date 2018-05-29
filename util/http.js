@@ -20,7 +20,28 @@ function getExpressInfo(nu, callBack) {
     }
   })
 }
-
-
+/**
+ * 获取电影信息
+ */
+function getMovieListData(url, callBack) {
+  wx.request({
+    url: url,
+    method: 'GET',
+    header: {
+      "Content-Type": "json"
+    },
+    success: (res) => {
+      callBack(res.data)
+    },
+    fail: (err) => {
+      console.log(err)
+    }
+  })
+}
 //==========================导出==========================
-exports.getExpressInfo = getExpressInfo
+module.exports = {
+  getExpressInfo: getExpressInfo,
+  getMovieListData: getMovieListData
+}
+
+

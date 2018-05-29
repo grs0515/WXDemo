@@ -1,9 +1,20 @@
 App({
 
   globalData: 'I am global data',
+  // doubanBase: "https://api.douban.com",
+  doubanBase: "http://t.yushu.im",
   //用户信息
   appData:{
     userInfo:null
+  },
+  deviceData:{
+    model:"",
+    pixelRatio:0,
+    windowWidth:0,
+    // windowHeight:0,//每个界面高度不一样
+    language:"",
+    version:"",
+    platform:""
   },
 
   /**
@@ -11,6 +22,19 @@ App({
    */
   onLaunch: function () {
     console.log("onLaunch")
+    try {
+      //加载系统信息
+      var res = wx.getSystemInfoSync()
+      this.deviceData.model = res.model;
+      this.deviceData.pixelRatio = res.pixelRatio;
+      this.deviceData.windowWidth = res.windowWidth;
+      this.deviceData.windowHeight = res.windowHeight;
+      this.deviceData.language = res.language;
+      this.deviceData.version = res.version;
+      this.deviceData.platform = res.platform;
+    } catch (e) {
+      console.log(e);
+    }
   },
 
   /**

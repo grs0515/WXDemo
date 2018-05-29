@@ -1,0 +1,94 @@
+/* src/project/readermovie/read/read-detail/read-detail.wxss */
+
+.detail-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.read-detail-img {
+  width: 100%;
+  height: 400rpx;
+}
+
+/*使用绝对布局: 居中显示   */
+
+.read-detail-play image {
+  width: 100rpx;
+  height: 100rpx;
+  left: 50%;
+  margin-left: -50rpx;
+  position: absolute;
+  top: 150rpx;
+}
+
+.read-detail-head {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 10rpx;
+}
+
+.read-detail-head text {
+  color: #666;
+}
+
+.read-detail-avatar {
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 40rpx;
+  margin-right: 30rpx;
+}
+
+.read-detail-title {
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  margin-left: 10rpx;
+}
+
+.read-detail-mid {
+  margin-top: 20rpx;
+}
+
+/*
+*当你定义的CSS中有position属性值为absolute、relative或fixed，
+*用z-index此取值方可生效。
+*此属性参数值越大，则被层叠在最上面。
+**/
+
+.read-detail-line {
+  margin: 0 auto;
+  height: 1px;
+  width: 660rpx;
+  position: relative;
+  top: -40rpx;
+  background-color: #eee;
+  z-index: -99;
+}
+
+.read-detail-tool {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.read-detail-collection {
+  height: 80rpx;
+  width: 80rpx;
+  margin-right: 20rpx;
+}
+
+.read-detail-share {
+  height: 80rpx;
+  width: 80rpx;
+  margin-right: 20rpx;
+}
+
+.read-detail-txt {
+  color: #666;
+  padding: 20px;
+  letter-spacing: 2px;
+  line-height: 40rpx;
+}

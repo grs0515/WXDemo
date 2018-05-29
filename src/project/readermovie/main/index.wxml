@@ -1,0 +1,21 @@
+<!--src/project/readermovie/main/index.wxml-->
+<view class='main-container'>
+  <!--内容  -->
+  <view class='main-content'>
+    <scroll-view style="height:{{srollHeight}}px" scroll-y='true'>
+      <block wx:for='{{tabDataList}}' wx:for-item='item' wx:for-index='index'>
+        <view wx:if='{{item.tabId==selectTabId}}'>
+             <read-component wx:if='{{tabDataList[0].tabId==selectTabId}}' />
+        <movie-component wx:elif='{{tabDataList[1].tabId==selectTabId}}' />
+        <view wx:else>
+          <text>测试 {{item.tabId}}</text>
+        </view>
+        </view>
+      </block>
+    </scroll-view>
+  </view>
+  <!-- 底部导航 -->
+  <view class='main-tabbar'>
+    <tabbar-component bindtabevent='onClickTabLisenter' />
+  </view>
+</view>

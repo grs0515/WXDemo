@@ -1,0 +1,12 @@
+<!--src/demo/lesson/day01/index.wxml-->
+<!-- 引用组件的页面模版 -->
+<view>
+  <another-component bindcustomevent="pageEventListener1">
+    <my-component bindcustomevent="pageEventListener2" outer-class="bg">
+      <!-- 这部分内容将被放置在组件 <slot name="before"> 的位置上 -->
+      <view slot="before">这里是插入到组件slot name="before"中的内容</view>
+      <!-- 这部分内容将被放置在组件 <slot name="after"> 的位置上 -->
+      <view slot="after">这里是插入到组件slot name="after"中的内容</view>
+    </my-component>
+  </another-component>
+</view>

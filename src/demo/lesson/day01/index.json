@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "my-component": "/src/demo/lesson/day01/components/component-tag-name",
+      "another-component": "/src/demo/lesson/day01/components/custom-another-component"
+  }
+}

@@ -1,0 +1,19 @@
+<!-- 组件模板 -->
+<tag-name-component>
+  <view class="outer-class">这段文本的颜色由组件外的 class 决</view>
+
+  <slot name="before"></slot>
+  <view class="my-class">这里是组件的内部细节</view>
+
+  <slot name="after"></slot>
+
+  <view>{{myProperty}}</view>
+  <button bindtap='onMyButtonTap'>Button</button>
+  <view>{{xxList[0].listA}}</view>
+  <button bindtap='_myPrivateMethod'>_myPrivateMethod</button>
+
+  <button bindtap="onTap">点击这个按钮将触发一系列事件</button>
+  <view>{{myBehaviorProperty}}</view>
+  <view>{{myProperty}}</view>
+  <button bindtap="myBehaviorMethod">点击触发 behavior 方法</button>
+</tag-name-component>

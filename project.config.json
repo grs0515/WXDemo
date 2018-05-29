@@ -4,22 +4,23 @@
 		"urlCheck": false,
 		"es6": true,
 		"postcss": true,
-		"minified": true
+		"minified": true,
+		"newFeature": true
 	},
-	"compileType": "weapp",
-	"libVersion": "1.6.0",
+	"compileType": "miniprogram",
+  "libVersion": "1.9.0",
 	"appid": "wxa8dd7f6e662e1ca4",
 	"projectname": "WXDemo",
 	"condition": {
-		"weapp": {
-			"current": -1,
-			"list": []
-		},
 		"search": {
 			"current": -1,
 			"list": []
 		},
 		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"miniprogram": {
 			"current": -1,
 			"list": []
 		}

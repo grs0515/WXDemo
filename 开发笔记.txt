@@ -132,3 +132,67 @@ app.wxss 以.wxss后缀是样式表文件
     <view id="blue" class="scroll-view-item bc_blue"></view>
 </scroll-view>
 注:scroll-y 允许纵向滚动;bindscrolltoupper 滚动到顶部/左边;scroll-top 设置竖向滚动条位置;scroll-into-view 值应为某子元素id（id不能以数字开头）;
+
+13,引入js:var http = require("../../../util/http.js")
+注:有几层目录,../几个;以引用http.js为参考,进一层目录加一个../
+
+14,导航跳转:wx.navigateTo({
+      url: "posts/post"
+    });
+注:不能以/xx 开头,以当前所在的js为参考,../是跳出一层目录,/xx是进入一层
+
+15,flex布局:
+  博客:http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html?^%$
+  /* 设置flex布局 */
+  display: flex;
+
+  /* 水平-主轴 *//*  flex-direction: row  *//* 垂直-主轴 */
+  flex-direction: row;
+
+  /* 包裹换行 */
+  flex-wrap: wrap;
+
+  /* 等同于:flex-direction: row;flex-wrap: wrap; */
+  /* flex-flow: row wrap; */
+  
+  /* 主轴上对齐: 左对齐flex-start,右对齐flex-end,居中center
+     左右间距相等space-around,左右对齐中间等分space-between
+  */
+  justify-content: center;
+
+  /* 交叉轴对齐: 上对齐flex-start,下对齐flex-end,居中center
+     填充父高度stretch(子元素无高度),子元素文字一行对齐baseline
+  */
+  align-items: center;
+注意，设为 Flex 布局以后，子元素的float、clear和vertical-align属性将失效。
+
+
+16,导入说明:
+js导入:var appconfig = require("../../data/appconfig.js");
+xml导入:<import src="read-item/read-item-template.wxml" />
+css导入:@import "read-item/read-item-template.wxss";
+
+17,css中的position说明
+/*
+*当你定义的CSS中有position属性值为absolute、relative或fixed，
+*用z-index此取值方可生效。
+*此属性参数值越大，则被层叠在最上面。
+**/
+.read-detail-line {
+  margin: 0 auto;
+  height: 1px;
+  width: 660rpx;
+  position: relative;
+  top: -40rpx;
+  background-color: #eee;
+  z-index: -99;
+}
+/*使用绝对布局: 居中显示   */
+.read-detail-play image {
+  width: 100rpx;
+  height: 100rpx;
+  left: 50%;
+  margin-left: -50rpx;
+  position: absolute;
+  top: 150rpx;
+}

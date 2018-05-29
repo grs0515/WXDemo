@@ -1,0 +1,31 @@
+<!--src/project/readermovie/read/read-detail/read-detail.wxml-->
+<view class='detail-container'>
+  <!--头部图片  -->
+  <image class='read-detail-img' src='{{isMusicPlaying?postData.music.coverImg:postData.headImgSrc}}'></image>
+  <!--头部用户  -->
+  <view class='read-detail-head'>
+    <image class='read-detail-avatar' src='{{postData.avatar}}'></image>
+    <text>{{postData.author}}</text>
+    <text>         </text>
+    <text>发表于 {{postData.dateTime}}</text>
+  </view>
+  <!--标题  -->
+  <text class='read-detail-title'>{{postData.title}}</text>
+  <!--中间分隔  -->
+  <view class='read-detail-mid'>
+    <view class='read-detail-tool'>
+      <image class='read-detail-collection' catchtap='onClickCollect'  src="{{isCollect?'/image/icon/collection.png':'/image/icon/collection-anti.png'}}"></image>
+      <image class='read-detail-share' src='/image/icon/share.png'></image>
+    </view>
+    <view class='read-detail-line' />
+  </view>
+  <!--文本内容  -->
+  <text class='read-detail-txt'>{{postData.detail}}</text>
+  <!--播放按钮  -->
+  <view class='read-detail-play'>
+    <image wx:if='{{isMusicPlaying}}' catchtap='onClickAudioPasue' src='/image/music/music-stop.png'></image>
+    <image wx:else catchtap='onClickAudioStrat' src='/image/music/music-start.png'></image>
+  </view>
+
+
+</view>

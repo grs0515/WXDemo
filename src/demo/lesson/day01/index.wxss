@@ -1,0 +1,4 @@
+/* src/demo/lesson/day01/index.wxss */
+.bg{
+  background-color: yellowgreen
+}

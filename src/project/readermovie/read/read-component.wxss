@@ -1,0 +1,11 @@
+/* src/project/readermovie/read/read-component.wxss */
+@import "read-item/read-item-template.wxss";
+.read-swiper{
+  width: 100%;
+  height:500rpx;
+}
+ /*less sass*/
+.read-swiper image{
+  width: 100%;
+  height:500rpx;
+}

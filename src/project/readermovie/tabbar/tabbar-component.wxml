@@ -1,0 +1,13 @@
+<!--util/xtabbar/tabbar-component.wxml-->
+<view class='tabbar-component'>
+  <block wx:for='{{tabbarList}}' wx:for-item='item' wx:for-index='{{index}}'>
+    <view class='tabbar-parent' bindtap='onClickTabBar' data-tabId='{{item.tabId}}' data-tabTitle='{{item.title}}' data-tabSelect='{{item.tabSelect}}' data-tabCount='{{tabbarList.length}}'>
+      <!--图片  -->
+      <image class='tabbar-image' wx:if='{{item.tabSelect}}' src='{{item.selectImage}}' />
+      <image class='tabbar-image' wx:else src='{{item.normalImage}}' />
+      <!--文本  -->
+      <text class='tabbar-text' wx:if='{{item.tabSelect}}' style='color:{{item.selectTextColor}}'>{{item.title}}</text>
+      <text class='tabbar-text' wx:else style='color:{{item.normalTextColor}}'>{{item.title}}</text>
+    </view>
+  </block>
+</view>

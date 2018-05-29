@@ -1,0 +1,8 @@
+
+.movie-item-head{
+  margin-top: 50rpx;
+  background-color: green;
+}
+.movie-item-grid{
+    background-color: blue;
+}

@@ -1,0 +1,22 @@
+<!--src/project/readermovie/movie/movie-component.wxml-->
+<import src='movie-item/movie-item-template.wxml' />
+<view class='movie-search'>
+<icon type='search'></icon>
+</view>
+
+<view class='movie-container'>
+
+  <view>
+    <template is='movieItem' />
+  </view>
+
+
+  <view>
+    <template is='movieItem' />
+  </view>
+
+
+  <view>
+    <template is='movieItem' />
+  </view>
+</view>

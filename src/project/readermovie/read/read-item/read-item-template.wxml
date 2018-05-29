@@ -1,0 +1,24 @@
+<template name="readItem">
+  <view class='read-item-container'>
+    <view class='read-item-head'>
+      <image class='read-item-avatar' src='{{avatar}}'></image>
+      <text>{{author}}</text>
+    </view>
+    <text class='read-item-title'>{{title}}</text>
+
+    <image class='read-item-img' src='{{imgSrc}}'></image>
+
+    <text class='read-item-txt'>{{content}}</text>
+
+    <view class='read-item-bottom'>
+
+      <image src="/image/icon/chat.png"></image>
+      <text>{{collection}}</text>
+
+      <image src="/image/icon/view.png"></image>
+      <text>{{reading}}</text>
+
+    </view>
+
+  </view>
+</template>

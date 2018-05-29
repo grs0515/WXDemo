@@ -1,0 +1,26 @@
+<!--src/project/readermovie/read/read-component.wxml-->
+<import src="read-item/read-item-template.wxml" />
+<view>
+  <!--轮播  -->
+  <view>
+    <swiper class='read-swiper' bindtap='onSwiperTap' autoplay='true' indicator-dots='true' interval='3000'>
+      <swiper-item>
+        <image id="7" src="/image/wx.png" data-postId="3"></image>
+      </swiper-item>
+      <swiper-item>
+        <image src="/image/vr.png" data-postId="4"></image>
+      </swiper-item>
+      <swiper-item>
+        <image src="/image/iqiyi.png" data-postId="5"></image>
+      </swiper-item>
+    </swiper>
+
+  </view>
+  <!--列表  -->
+  <block wx:for="{{postList}}" wx:for-item="item" wx:for-index="idx">
+    <!--//template-->
+    <view catchtap="onPostTap" data-postId="{{item.postId}}">
+      <template is="readItem" data="{{...item}}" />
+    </view>
+  </block>
+</view>
