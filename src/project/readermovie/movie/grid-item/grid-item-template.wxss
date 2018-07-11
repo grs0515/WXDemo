@@ -1,0 +1,32 @@
+@import "star-template.wxss";
+
+.grid-item-container {
+  display: flex;
+  flex-direction: column;
+  margin-left: 30rpx;
+  margin-bottom: 30rpx;
+  background-color: white;
+}
+
+/*计算:
+  x*3 + 4*y = 750
+  x=210--->630--->120/4=30
+  */
+
+.m-grid-item-img {
+  width: 210rpx;
+  height: 280rpx;
+  padding-bottom: 10rpx;
+}
+
+.grid-item-title {
+  width: 210rpx;
+  margin-bottom: 10rpx;
+  font-size: 24rpx;
+  /*隐藏  */
+  overflow: hidden;
+  /*不换行  */
+  white-space: nowrap;
+  /*最后以...结尾  */
+  text-overflow: ellipsis;
+}

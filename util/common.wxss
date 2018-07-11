@@ -1,0 +1,60 @@
+/*公共布局样式  */
+
+.layout-h {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.layout-v {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.line {
+  width: 100%;
+  height: 1rpx;
+  background-color: #fff;
+}
+
+.line-gray {
+  width: 100%;
+  height: 1rpx;
+  margin: 5rpx 0;
+  background-color: gainsboro;
+}
+
+.gray {
+  color: gray;
+  font-size: 26rpx;
+}
+
+.base-font {
+  font-size: 26rpx;
+}
+
+.margin-left15 {
+  margin-left: 15rpx;
+}
+
+.margin-right15 {
+  margin-right: 15rpx;
+}
+
+.margin-top15 {
+  margin-top: 15rpx;
+}
+
+.margin-bottom15 {
+  margin-bottom: 15rpx;
+}
+
+.single {
+  /*隐藏  */
+  overflow: hidden;
+  /*不换行  */
+  white-space: nowrap;
+  /*最后以...结尾  */
+  text-overflow: ellipsis;
+}

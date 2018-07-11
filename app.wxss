@@ -1,3 +1,4 @@
+/* 默认容器布局  */
 .container {
   display: flex;
   flex-direction: column;
@@ -5,6 +6,34 @@
   min-height: 100%;
   font-size: 32rpx;
   font-family: -apple-system-font, Helvetica Neue, Helvetica, sans-serif;
+}
+/*分割线  */
+.line{
+  width: 100%;
+  height: 2rpx;
+  background-color: #fff;
+}
+/*公共尺寸大小  */
+.width-s200{
+  width: 200rpx;
+}
+.width-s220{
+  width: 220rpx;
+}
+.width-s240{
+  width: 240rpx;
+}
+.width-s250{
+  width: 250rpx;
+}
+.height-s250{
+  height: 250rpx;
+}
+.height-s300{
+  height: 300rpx;
+}
+.height-s350{
+  height: 350rpx;
 }
 
 .input {

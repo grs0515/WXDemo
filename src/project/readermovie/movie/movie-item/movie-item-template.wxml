@@ -1,9 +1,15 @@
+<import src='../grid-item/grid-item-template.wxml' />
 <template name="movieItem">
-  <view class='movie-item-head'>
-    头部标题
+  <!--头部  -->
+  <view class='layout-h movie-item-head'>
+    <text class='gray'>{{categoryTitle}}</text>
+    <view class='movie-more' bindtap='onClickMoreTap' data-category='{{categoryTitle}}'>更多 ></view>
   </view>
-
-  <view class='movie-item-grid'>
-    grid 条目
+  <!--grid  -->
+  <view class='layout-h movie-item-grid'>
+    <block wx:for='{{movieData.subjects}}' wx:for-item='movie'>
+      <!--自定义item, 并打开  -->
+      <template is='gridItem' data='{{...movie}}' />
+    </block>
   </view>
 </template>

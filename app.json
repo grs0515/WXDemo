@@ -74,7 +74,9 @@
     "src/project/readermovie/welcome",
     "src/project/readermovie/main/index",
     "src/demo/lesson/day01/index",
-    "src/project/readermovie/read/read-detail/read-detail"
+    "src/project/readermovie/read/read-detail/read-detail",
+    "src/project/readermovie/movie/movie-category/movie-category",
+    "src/project/readermovie/movie/movie-detail/movie-detail"
   ],
   "window": {
     "navigationBarBackgroundColor": "#ffffff",
@@ -114,5 +116,5 @@
     "uploadFile": 20000,
     "downloadFile": 20000
   },
-  "debug": true
+  "debug": false
 }

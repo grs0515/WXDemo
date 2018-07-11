@@ -1,0 +1,11 @@
+.item-star{
+  display: flex;
+  flex-direction: row;
+  width: 150rpx;
+  height: 35rpx;
+  align-items: center;
+}
+.star{
+  width: 25rpx;
+  height: 25rpx;
+}

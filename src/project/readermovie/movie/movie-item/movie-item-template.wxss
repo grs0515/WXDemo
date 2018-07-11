@@ -1,8 +1,19 @@
+@import "/util/common.wxss";
+@import "../grid-item/grid-item-template.wxss";
 
 .movie-item-head{
-  margin-top: 50rpx;
-  background-color: green;
+  padding-top: 20rpx;
+  padding-bottom: 20rpx;
+  padding-right: 15rpx;
+  background-color: white;
+  /*左右对齐  */
+  justify-content: space-between;
+  align-items: baseline;
+}
+.movie-more{
+  color: blue;
+  font-size: 26rpx;
 }
 .movie-item-grid{
-    background-color: blue;
+  background-color: white;
 }

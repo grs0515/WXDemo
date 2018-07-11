@@ -3,6 +3,7 @@
   <!--内容  -->
   <view class='main-content'>
     <scroll-view style="height:{{srollHeight}}px" scroll-y='true'>
+    <!-- for循环创建界面 -->
       <block wx:for='{{tabDataList}}' wx:for-item='item' wx:for-index='index'>
         <view wx:if='{{item.tabId==selectTabId}}'>
              <read-component wx:if='{{tabDataList[0].tabId==selectTabId}}' />
@@ -14,6 +15,7 @@
       </block>
     </scroll-view>
   </view>
+  <view class='line' />
   <!-- 底部导航 -->
   <view class='main-tabbar'>
     <tabbar-component bindtabevent='onClickTabLisenter' />

@@ -1,0 +1,11 @@
+<import src='star-template.wxml' />
+<template name='gridItem'>
+    <view catchtap='onItemClick' data-id='{{id}}' class='grid-item-container'>
+    <!--图片  -->
+      <image class='m-grid-item-img' src='{{images.large}}'></image>
+      <!--标题  -->
+      <text class='grid-item-title'>{{title}}</text>
+      <!--评分  -->
+      <template is='star' data='{{...rating}}' />
+    </view>
+</template>

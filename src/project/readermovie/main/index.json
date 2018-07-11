@@ -1,11 +1,9 @@
 {
   "enablePullDownRefresh": false,
   "navigationBarTitleText": "豆瓣",
-    "usingComponents": {
-
-      "tabbar-component": "/src/project/readermovie/tabbar/tabbar-component",
-            "read-component": "/src/project/readermovie/read/read-component",
-            "movie-component": "/src/project/readermovie/movie/movie-component"
-            
-    }
+  "usingComponents": {
+    "tabbar-component": "/src/project/readermovie/tabbar/tabbar-component",
+    "read-component": "/src/project/readermovie/read/read-component",
+    "movie-component": "/src/project/readermovie/movie/movie-component"
+  }
 }

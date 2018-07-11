@@ -8,7 +8,7 @@
 		"newFeature": true
 	},
 	"compileType": "miniprogram",
-  "libVersion": "1.9.0",
+	"libVersion": "2.1.1",
 	"appid": "wxa8dd7f6e662e1ca4",
 	"projectname": "WXDemo",
 	"condition": {

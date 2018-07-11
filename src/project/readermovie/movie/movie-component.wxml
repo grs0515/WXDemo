@@ -1,22 +1,35 @@
 <!--src/project/readermovie/movie/movie-component.wxml-->
 <import src='movie-item/movie-item-template.wxml' />
+<import src="grid-item/grid-item-template.wxml" />
+
+<!--搜索标题  -->
 <view class='movie-search'>
-<icon type='search'></icon>
+  <icon type='search' />
+  <input placeholder-class="placeholder" value="{{inputValue}}"bindfocus="onSearchBindFocus" bindblur="onSearchBindBlur" placeholder='请输出查询内容'></input>
+  <image wx:if='{{searchShow}}' class='search-close' bindtap='onCloseSearch' src='/image/icon/xx.png'></image>
 </view>
 
-<view class='movie-container'>
-
+<!--电影内容  -->
+<view class='movie-container' wx:if='{{containerShow}}'>
+  <!--正在热映  -->
   <view>
-    <template is='movieItem' />
+    <template is='movieItem' data='{{...inTheaters}}' />
   </view>
-
-
+  <view class='app-line20' />
+  <!--即将上映  -->
   <view>
-    <template is='movieItem' />
+    <template is='movieItem' data='{{...comingSoon}}' />
   </view>
-
-
+  <view class='app-line20' />
+  <!--Top250  -->
   <view>
-    <template is='movieItem' />
+    <template is='movieItem' data='{{...top250}}' />
   </view>
+</view>
+
+<!-- 搜索内容  -->
+<view class='layout-h' wx:if='{{searchShow}}'>
+  <block wx:for='{{movieSearch}}' wx:for-item='movie'>
+    <template is='gridItem' data='{{...movie}}' />
+  </block>
 </view>

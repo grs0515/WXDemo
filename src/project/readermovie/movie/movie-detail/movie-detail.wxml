@@ -1,0 +1,59 @@
+<!--src/proect/readermovie/movie/movie-detail/movie-detail.wxml-->
+<import src='../grid-item/star-template.wxml' />
+<view class='layout-v'>
+  <!--头部信息  -->
+  <!--	默认'scaleToFill'	图片裁剪、缩放的模式  -->
+  <image class='head-background' mode='aspectFill' src='{{detail.images.large}}'></image>
+  <view class='line-gray'></view>
+  <view class='movie-head'>
+    <text class='head-title single'>{{detail.title}}</text>
+    <text class='head-area'>{{detail.countries}}.{{detail.year}}</text>
+    <view class='head-like'>
+      <text class='head-count base-font'>{{detail.wish_count}}</text>
+      <text class='head-note base-font'>人喜欢</text>
+      <text class='head-count base-font'>{{detail.reviews_count}}</text>
+      <text class='head-note base-font'>条评论</text>
+    </view>
+  </view>
+  <image class='head-image' catchtap='onPreviewImage' data-src='{{detail.images.large}}'  src='{{detail.images.large}}'></image>
+  <!--电影信息  -->
+  <view class='movie-info'>
+    <text class='info-title single'>{{detail.original_title}}</text>
+    <view class='layout-h margin-top15'>
+      <text class='gray margin-right15'>评分</text>
+      <template is='star' data='{{...detail.rating}}' />
+      <text class='gray'>{{detail.rating.average}}</text>
+    </view>
+    <view class='layout-h'>
+      <text class='gray margin-right15'>导演</text>
+      <text class='gray'>{{detail.directors[0].name}}</text>
+    </view>
+    <view class='layout-h'>
+      <text class='gray margin-right15'>影人</text>
+      <block wx:for='{{detail.casts}}'>
+        <text class='gray'>{{item.name}}/</text>
+      </block>
+    </view>
+    <text class='gray margin-right15'>类型</text>
+    <block wx:for='{{detail.genres}}'>
+      <text class='gray'>{{item}}、</text>
+    </block>
+    <text class='gray'>{{detail.genres[0]}}</text>
+  </view>
+  <view class='mline-gray'></view>
+  <!--剧情  -->
+  <view class='movie-txt'>
+    <text class='gray margin-bottom15'>剧情简介</text>
+    <text class='gray margin-top15'>{{detail.summary}}</text>
+  </view>
+  <view class='mline-gray'></view>
+  <!--影人  -->
+  <view class='movie-user'>
+    <text class="gray margin-bottom15">影人</text>
+    <scroll-view>
+      <block wx:for='{{detail.casts}}'>
+        <image class='user-img' catchtap='onPreviewImage' data-detail='{{detail.casts}}' data-src='{{item.avatars.large}}' src='{{item.avatars.large}}'></image>
+      </block>
+    </scroll-view>
+  </view>
+</view>

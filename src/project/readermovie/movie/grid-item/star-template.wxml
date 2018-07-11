@@ -1,0 +1,15 @@
+<template name='star'>
+  <view class='item-star'>
+    <!--选择五星  -->
+    <image class='star' src="{{average>2?'/image/icon/star.png':'/image/icon/none-star.png'}}"></image>
+
+    <image class='star' src="{{average>4?'/image/icon/star.png':'/image/icon/none-star.png'}}"></image>
+
+    <image class='star' src="{{average>6?'/image/icon/star.png':'/image/icon/none-star.png'}}"></image>
+
+    <image class='star' src="{{average>8?'/image/icon/star.png':'/image/icon/none-star.png'}}"></image>
+
+    <image class='star' src="{{average>9?'/image/icon/star.png':'/image/icon/none-star.png'}}"></image>
+
+  </view>
+</template>

@@ -20,16 +20,16 @@ Page({
     this.setData({
       tabDataList:tabDatas.configDatas
     })
-    console.log("lllllllll")
   },
   /**
    * 初始化滚动布局高度
    */
   initScrollHeight: function () {
     try {
-      var res = wx.getSystemInfoSync()
+      var res = wx.getSystemInfoSync();
+      console.log(res.windowWidth);
       this.setData({
-        // srollHeight高度 = 利用窗口可使用高度 - first部分高度（这里的高度单位为px，所有利用比例将300rpx转换为px）
+        // srollHeight高度 = 利用窗口可使用高度 - first部分高度（这里的高度单位为px，所有利用比例将300rpx转换为px）,80为tabbar-component.wxss定义的
         srollHeight: res.windowHeight - res.windowWidth / 750 * (80 + 3)
       });
     } catch (e) {

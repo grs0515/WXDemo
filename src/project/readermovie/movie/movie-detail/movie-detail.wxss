@@ -1,0 +1,85 @@
+/* src/project/readermovie/movie/movie-detail/movie-detail.wxss */
+@import "/util/common.wxss";
+@import "../grid-item/star-template.wxss";
+
+/*头部信息  */
+
+.head-background {
+  width: 100%;
+  height: 340rpx;
+  -webkit-filter: blur(10px);
+}
+
+.movie-head {
+  position: absolute;
+  display: flex;
+  top: 0;
+  left: 0;
+  flex-direction: column;
+  margin: 30rpx;
+  height: 280rpx;
+}
+
+.head-title {
+  max-width: 600rpx;
+  font-size: 45rpx;
+  color: white;
+}
+
+.head-area {
+  font-size: 32rpx;
+  color: white;
+  margin: 30rpx 0 90rpx;
+}
+
+.head-count {
+  color: red;
+  margin-right: 20rpx;
+}
+
+.head-note {
+  margin-right: 60rpx;
+}
+
+/*使用绝对定位  */
+
+.head-image {
+  height: 280rpx;
+  width: 200rpx;
+  position: absolute;
+  top: 200rpx;
+  right: 40rpx;
+}
+
+.movie-info {
+  padding: 30rpx 0rpx 50rpx 30rpx;
+}
+
+.info-title {
+  font-size: 30rpx;
+  font: bold;
+  margin: 15rpx 0 80rpx;
+}
+
+.movie-txt {
+  display: flex;
+  flex-direction: column;
+  padding: 30rpx;
+}
+
+.movie-user {
+  display: flex;
+  flex-direction: column;
+  padding: 30rpx 0 30rpx 30rpx;
+}
+
+.user-img {
+  height: 280rpx;
+  width: 200rpx;
+  margin: 15rpx 30rpx 30rpx 0;
+}
+.mline-gray{
+  width: 100%;
+  height: 3rpx;
+  background-color: gainsboro;
+}

@@ -1,0 +1,7 @@
+<!--src/project/readermovie/movie/movie-category/movie-category.wxml-->
+<import src="../grid-item/grid-item-template.wxml" />
+<view class='layout-h movie-category-container'>
+  <block wx:for='{{movieCatagory}}' wx:for-item='movie'>
+    <template is='gridItem' data='{{...movie}}' />
+  </block>
+</view>

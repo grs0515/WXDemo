@@ -1,4 +1,4 @@
-/* util/xtabbar/tabbar-component.wxss */
+/* /tabbar/tabbar-component.wxss */
 /* 整个的tabbar的高是80rpx  */
 .tabbar-component {
   display: flex;

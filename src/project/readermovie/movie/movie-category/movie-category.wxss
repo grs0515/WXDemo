@@ -1,0 +1,7 @@
+/* src/project/readermovie/movie/movie-category/movie-category.wxss */
+@import "/util/common.wxss";
+@import "../grid-item/grid-item-template.wxss";
+
+.movie-category-container{
+  padding: 30rpx 0;
+}

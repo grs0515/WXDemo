@@ -196,3 +196,40 @@ css导入:@import "read-item/read-item-template.wxss";
   position: absolute;
   top: 150rpx;
 }
+
+18,使用Component组件:
+  (1)创建:Component({
+    behaviors: [],
+    // 数据和属性值
+    properties: {},
+    data: {}, // 私有数据，可用于模版渲染
+    // 生命周期函数，可以为函数，或一个在methods段中定义的方法名
+    attached: function(){},
+    moved: function(){},
+    detached: function(){},
+    // 内部方法建议以下划线开头
+    methods: {}
+  })
+  (2)xx.json中使用:"usingComponents": { "read-component": "xx/xx/"}
+  (3)xx.wxml中引用: <read-component />
+
+19,在CSS中，BOX的Padding属性:
+  padding:5px;就是上下左右都为5；
+  padding:0px,5px;就是上下为0，左右为5；
+  padding:10px 5px 15px;就是上位10，左右为5，下为15；
+  padding:0px,5px,10px,15px;就是上为0，右为5，下为10，左为15，
+  padding的顺序是顺时针方向的
+
+20,重组数据和打开对象
+  // 组装数据格式
+  var movieSubjects = {};
+  movieSubjects["inTheaters"]={
+  categoryTitle: categoryTitle,
+    movieData:data
+  };
+  this.setData(movieSubjects);
+  //用...打开指定的key对象
+  <template is='movieItem' data='{{...inTheaters}}' />
+
+21,绑定数据,必须用小写!!!
+data-movieId='{{id}}' -->movieid

@@ -8,7 +8,8 @@ var configDatas = [
     selectTextColor: "#183694",
     title: "阅读",
     tabSelect: true
-  }, {
+  }, 
+  {
     tabId: 1,
     tabUrl: "<movie-component />",
     normalImage: "/image/tab/dianying.png",
@@ -16,15 +17,6 @@ var configDatas = [
     normalTextColor: "#636363",
     selectTextColor: "#183694",
     title: "电影",
-    tabSelect: false
-  }, {
-    tabId: 2,
-    tabUrl: "",
-    normalImage: "/image/tab/dianying.png",
-    selectImage: "/image/tab/dianying_hl.png",
-    normalTextColor: "#636363",
-    selectTextColor: "#183694",
-    title: "电影1",
     tabSelect: false
   }
 ]
